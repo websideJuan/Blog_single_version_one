@@ -23,7 +23,7 @@ body{
 
 a{
     text-decoration: none;
-    color: var(--azul);
+    color: var(--blanco);
 }
 
 nav{
@@ -38,12 +38,10 @@ img{
 }
 
 .btn{
-    border: .05rem solid var(--azul);
-    background-color: var(--azulMedium);
+    outline: .05rem solid var(--azul);
+    border: none;
     color: var(--azul);
     padding: .5rem .6rem;
-    border-radius: 100%;
-
 }
 
 .cta{
@@ -60,11 +58,6 @@ img{
     width: 90%;
     max-width: calc(100% - 10%);
     margin: 0 auto;
-    /* position: relative; */
-}
-
-header{
-    /* background-image: linear-gradient(0deg, var(--azulMedium), var(--celesteMedium)); */
 }
 
 .header-nav{
@@ -74,17 +67,17 @@ header{
 
     position: fixed;
     width: 100%;
-    padding: 1rem 1.20rem;
+    
     top: 0; left: 0;
     z-index: 999;
-    background-color: var(--blanco);
-    /* background-image: linear-gradient(180deg, var(--azul), rgba(255, 255, 255, 0)); */
 }
 
 .header-nav_brands{
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 1.2rem;
+    padding-left: 1rem;
+    color: var(--blanco);
 }
 
 .header-nav_position{
@@ -97,10 +90,10 @@ header{
 }
 
 .btn_menu{
-    background-color: var(--azulMedium);
-    /* color: var(--); */
+    background-color: var(--azul);
     position: relative;
     z-index: 999;
+    padding: 1rem;
 }
 
 .header-nav_item{
@@ -138,13 +131,11 @@ header{
 .hero{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     grid-column: 1/2;
     grid-row: 1/2;
-
     position: relative;
     z-index: 1;
-
     opacity: 0;
 }
 
@@ -156,22 +147,27 @@ header{
 }
 
 .hero_container{
-    margin-top: auto;
+    background-image: linear-gradient(180deg, var(--azulMedium), var(--blancoMedium));
+    height: 100%;
 }
 
 .hero_image{
     width: 100%;
-    height: 300px;
+    height: 90%;
     object-fit: cover;
+    position: relative;
+    z-index: -1;
 }
 
 .hero_content{
-    margin-top: 1.5rem;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;    
-    text-align: center;
 }
 
 .hero_banner_LR{
@@ -180,9 +176,10 @@ header{
     inset: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     pointer-events: none;
-    padding: 0 .5rem;
+    padding: 0 1rem;
+    padding-bottom: 3rem;
 }
 
 .btn_preven, .btn_next{
@@ -233,7 +230,6 @@ header{
 .certificated{
     padding: 4rem 0;
     background-color: rgba(211, 211, 211, 0.674);
-    /* margin: 10vh 0; */
 }
 
 .g_certificated{
@@ -272,17 +268,15 @@ footer{
     'header body body'
     'header footer footer';
     color: var(--blanco);
-    height: 60vh;
+    height: 50vh;
     padding: 1rem 0;
 }
 
 .header{
     grid-area: header;
-    /* background-color: #202020; */
 }
 
 .body{
-    /* background-color: #fff; */
     grid-area: body;
     font-size: .9rem;
 }
@@ -299,7 +293,7 @@ footer{
 
 @media (min-width:375px) {
     .container{
-        width: 80%;
+        width: 90%;
         max-width: calc(100% - 10%);
         margin: 0 auto;
         position: relative;
@@ -312,7 +306,9 @@ footer{
         position: fixed;
         inset: 0;
         background: transparent;
-        transform: translate(-100%);
+        overflow: hidden;
+        width: 0%;
+        transition: width .5s;
     }
 
     .header-nav_item{
