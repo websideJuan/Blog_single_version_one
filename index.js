@@ -14,16 +14,16 @@ buttonMenu.addEventListener('click', () => {
 
 
 function ShowMenu (){
-    // let width = menuShow.scrollWidth
     let initializing = menuShow.clientWidth
     let widthReference = window.innerWidth
     
-    
     if(initializing === 0){
+        buttonMenu.firstElementChild.setAttribute('src', './assets/icons/closeBTN.svg')
         return menuShow.style.width = `${widthReference}px`
     }
-    
+
     menuShow.style.width = `0px`
+    buttonMenu.firstElementChild.setAttribute('src', './assets/icons/menuBTN.svg')
     
 }
 
