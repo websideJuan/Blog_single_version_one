@@ -11,32 +11,26 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 
-
-// console.log( "console 1", document.querySelector('#btn_menu_show').getBoundingClientRect().bottom)
 window.addEventListener('scroll', () => {
-    let referenceElement = menuShow.getBoundingClientRect().bottom
+
     let referenceElementWindow = document.querySelector('body').getBoundingClientRect().bottom
     let positionNavbar = window.scrollY
 
-    // console.log(`elemento DOM menu ${parseInt(referenceElement)}`)
-    // console.log(`elemento Body ${parseInt(referenceElementWindow / 4) }`)
-    // console.log(`Barra posicionada en el docuemnto ${parseInt(positionNavbar)}`)
-
-    console.log(referenceElementWindow / 4 <= positionNavbar)
-
     if(referenceElementWindow / 4 <= positionNavbar) {
         document.querySelector('.header-nav').style.backgroundColor = 'var(--azul)'
+        document.querySelector('.header-nav').style.boxShadow = '0 0 20px rgba(0 0 0 / .5)'
         return 
     }
     
     document.querySelector('.header-nav').style.backgroundColor = 'initial'
+    document.querySelector('.header-nav').style.boxShadow = 'initial'
 })
 
 const showConsole = () => {
 
     const options = {
-        top: window.innerHeight,
-        left:0,
+        top: -window.innerHeight,
+        left: 0,
         behavior: "smooth"
     }
 
@@ -54,7 +48,8 @@ function ShowMenu (){
     
     if(initializing === 0){
         buttonMenu.firstElementChild.setAttribute('src', './assets/icons/closeBTN.svg')
-        return menuShow.style.width = `${widthReference}px`
+        menuShow.style.width = `${widthReference}px`
+        return
     }
 
     menuShow.style.width = `0px`
