@@ -26,18 +26,44 @@ function backendNote () {
                 </li>
             </ul>
         </div>
-        
+
         <div class="header_docs">
             <div class="hero_docs">
-                <h2 class="title_header_docs">Titulo One</h2>
+                <h2 class="title_header_docs">Backend</h2>
 
                 <button class="btn" id="btn_hero" >
-                    <img href="../assets/icons/navegation.svg" alt="none"/>
+                    <img src="../assets/icons/navegation.svg" alt="none"/>
                 </button>
+
+                
             </div>
 
-            <div class="container_docs">
+            <div class="container_docs container">
                 <div class="cards_docs">
+                    <img src="../assets/icons/bolloon.svg" alt="none" class="image_cards_docs"/>
+
+                    <div class="cards_content_docs">
+                        <h2>Backend from javascript fullStack</h2>
+                        <p>
+                            Bienvenido a la recopilacion de mis estudios autodidactas
+                        </p>
+
+                        <p>
+                            El principal motivo de aprender el arte de programar 
+                            ganar mucho y trabajar poco, ajaja.
+                        </p>
+
+                        <p>
+                            Ya hablando en serio, la compania de las computadoras me ayudo con todo en mi vida, aun siendo algo de lo que se burlaban
+                        </p>
+
+                    </div>
+                </div>
+                <div class="cards_docs">
+                    <h2>Server side render</h2>
+                    <div class="cards_content_docs">
+
+                    </div>
                 </div>
             </div>
         </div>
