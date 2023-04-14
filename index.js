@@ -1,21 +1,26 @@
+import backendNote from "./pages/backend.js"
+
 const buttonMenu = document.getElementById('btn_menu_show')
 const prevent = document.getElementById('btnPrevent')
 const next = document.getElementById('btnNext')
-
+const viewBackend = document.getElementById('viewBackend')
 const menuShow = document.getElementById('menuShow')
-
+const header = document.querySelector('.header')
 
 window.addEventListener('DOMContentLoaded', () => {
     window.scroll({top:0})
     currentCarrusel(positionInitial);
+    
 })
 
+viewBackend.addEventListener('click', (e) => {
+    e.preventDefault()
+    backendNote()
+})
 
 window.addEventListener('scroll', () => {
-
     let referenceElementWindow = document.querySelector('body').getBoundingClientRect().bottom
     let positionNavbar = window.scrollY
-
     if(referenceElementWindow / 4 <= positionNavbar) {
         document.querySelector('.header-nav').style.backgroundColor = 'var(--azul)'
         document.querySelector('.header-nav').style.boxShadow = '0 0 20px rgba(0 0 0 / .5)'
