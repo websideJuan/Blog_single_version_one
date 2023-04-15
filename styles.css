@@ -358,9 +358,7 @@ footer{
 }
 
 .docs{
-    height: 100vh;
     display: grid;
-
     grid-template-columns: 40% 1fr;
 
     background: linear-gradient(180deg, var(--azul), var(--blancoMedium)), url('./assets/fullstack/servidor_1280.jpg');
@@ -384,9 +382,6 @@ footer{
 .nav_item_docs{
     list-style: none;
     background-image: linear-gradient(180deg, #192c729d 100%, var(--blanco) 100%);
-    height: 90vh;
-    margin: auto 0;
-    margin-top: 4rem;
 
     width: 100%;
 }
@@ -401,40 +396,31 @@ footer{
 }
 
 .header_docs{
-    overflow: scroll;
     position: relative;
-
-    height: 90vh;
-    margin: auto 0;
-    margin-top: 4rem;
-    background-color: var(--blanco);
-    
+    height: calc(50% * 3);
+    padding-top: 1rem;
 }
 
 .image_cards_docs{
-    /* display: block; */
-    /* width: 90%; */
     width: 50%;
     margin: auto;
 }
 
 .hero_docs{
-    top: 5px;
-    outline: 10px solid var(--blanco);
+    top: 60px;
+    outline: 0px solid var(--blanco);
     position: sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
     background-color: var(--blanco);
-
+    /* transform: translateX(-100%); */
 }
 
 .container_docs{
     display: flex;
     flex-direction: column;
-    height: calc(100vh * 2);
-    gap: 1rem;
 }
 
 .cards_content_docs{
@@ -453,10 +439,11 @@ footer{
 }
 
 .cards_docs{
-    height: 65vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: var(--blanco);
 }
 
 @media (min-width:375px) {

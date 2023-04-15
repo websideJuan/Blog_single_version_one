@@ -38,7 +38,7 @@ function backendNote () {
                 
             </div>
 
-            <div class="container_docs container" id="bienvenidoSR">
+            <div class="container_docs" id="bienvenidoSR">
                 <div class="cards_docs">
                     <div class="cards_indice_docs">
 
@@ -70,6 +70,7 @@ function backendNote () {
                         <p>texto de la siente bentana</p>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>`
