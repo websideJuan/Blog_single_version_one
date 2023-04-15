@@ -1,10 +1,10 @@
+
+    let DOMrender = document.querySelector('header')
+    let containerRender = document.createElement('div')
 // import  "../assets/blog/ecommerce-gb2880d7bf_1280.jpg"
 
 
 function backendNote () {
-
-    let DOMrender = document.querySelector('header')
-    let containerRender = document.createElement('div')
 
     DOMrender.innerHTML = ''
 
@@ -14,11 +14,11 @@ function backendNote () {
         <div class="nav_docs">
             <ul class="nav_item_docs">
                 <li>
-                    <a href="#">home</a>
+                    <a href="#bienvenidoSR">home</a>
                 </li>
 
                 <li>
-                    <a href="#">home</a>
+                    <a href="#serverSR">home</a>
                 </li>
 
                 <li>
@@ -38,12 +38,14 @@ function backendNote () {
                 
             </div>
 
-            <div class="container_docs container">
+            <div class="container_docs container" id="bienvenidoSR">
                 <div class="cards_docs">
-                    <img src="../assets/icons/bolloon.svg" alt="none" class="image_cards_docs"/>
+                    <div class="cards_indice_docs">
+
+                    </div>
 
                     <div class="cards_content_docs">
-                        <h2>Backend from javascript fullStack</h2>
+                        <h2>Backend from javascript</h2>
                         <p>
                             Bienvenido a la recopilacion de mis estudios autodidactas
                         </p>
@@ -59,10 +61,13 @@ function backendNote () {
 
                     </div>
                 </div>
-                <div class="cards_docs">
-                    <h2>Server side render</h2>
-                    <div class="cards_content_docs">
+                <div class="cards_docs" id="serverSR">
+                    <img src="../assets/icons/bolloon.svg" alt="none" class="image_cards_docs"/>
 
+
+                    <div class="cards_content_docs">
+                        <h2 >Server side render</h2>
+                        <p>texto de la siente bentana</p>
                     </div>
                 </div>
             </div>
@@ -74,20 +79,42 @@ function backendNote () {
     
 
     let btn_hero_docs = DOMrender.querySelector('#btn_hero')
-    btn_hero_docs.addEventListener('click', (e) => showMenuDocs(e))
+    let containerDOM = DOMrender.querySelector('.header_docs')
 
+
+   
+
+
+    btn_hero_docs.addEventListener('click', (e) => {
+        e.stopPropagation()
+        showMenuDocs(e)
+    })
 
 
 
     const showMenuDocs = ({target:{parentElement}}) => {
-
-
-        setShowMenuDocs(parentElement.parentElement.parentElement.parentElement)
-       
-
-    
+        setShowMenuDocs(parentElement.parentElement.parentElement.parentElement)    
     }
 
+
+    
+    containerDOM.addEventListener('scroll', () => {
+        setLocationElementDOM()
+    })
+
+
+
+
+}
+
+function setLocationElementDOM () {
+    const location = [...DOMrender.querySelectorAll('.header_docs div')]
+
+    location.forEach(address => {
+        parseInt(address.getBoundingClientRect().bottom)
+    })
+
+    return location
 }
 
 
