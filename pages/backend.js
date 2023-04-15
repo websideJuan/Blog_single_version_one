@@ -10,70 +10,80 @@ function backendNote () {
 
     
     
-    containerRender.innerHTML = `<div class="docs activate">
+    containerRender.innerHTML = `
+    <div class="docs activate">
+
+        <div class="hero_docs">
+                
+            <h2 class="title_header_docs">Backend</h2>
+
+            <button class="btn" id="btn_hero" >
+                <img src="../assets/icons/navegation.svg" alt="none"/>
+            </button>
+        </div>
+    
         <div class="nav_docs">
-            <ul class="nav_item_docs">
-                <li>
-                    <a href="#bienvenidoSR">home</a>
-                </li>
+            <div class="nav_container_docs">
+                <ul class="nav_item_docs">
+                    <li>
+                        <a href="#">home</a>
+                    </li>
 
-                <li>
-                    <a href="#serverSR">home</a>
-                </li>
+                    <li>
+                        <a href="#serverSR">home</a>
+                    </li>
 
-                <li>
-                    <a href="#">home</a>
-                </li>
-            </ul>
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div class="header_docs">
-            <div class="hero_docs">
-                <h2 class="title_header_docs">Backend</h2>
 
-                <button class="btn" id="btn_hero" >
-                    <img src="../assets/icons/navegation.svg" alt="none"/>
-                </button>
 
-                
-            </div>
 
             <div class="container_docs" id="bienvenidoSR">
                 <div class="cards_docs">
-                    <div class="cards_indice_docs">
 
-                    </div>
-
+                    <img src="../assets/icons/bolloon.svg" alt="none" class="image_cards_docs"/>
                     <div class="cards_content_docs">
-                        <h2>Backend from javascript</h2>
-                        <p>
-                            Bienvenido a la recopilacion de mis estudios autodidactas
-                        </p>
+                        <h2>Servidor JS</h2>
+                        <p>Entrar al backend es el siguiente nivel para un desarrollador frontend, llegando a ser fullstack</p>
 
-                        <p>
-                            El principal motivo de aprender el arte de programar 
-                            ganar mucho y trabajar poco, ajaja.
-                        </p>
-
-                        <p>
-                            Ya hablando en serio, la compania de las computadoras me ayudo con todo en mi vida, aun siendo algo de lo que se burlaban
-                        </p>
-
+                        <p>Esto lleva a comprender el lenguaje en si mismo, conociendo temas como el callback en profundidad</p>
                     </div>
                 </div>
-                <div class="cards_docs" id="serverSR">
+
+                <div class="cards_docs">
+
                     <img src="../assets/icons/bolloon.svg" alt="none" class="image_cards_docs"/>
+                    <div class="cards_content_docs">
+                        <h2>Node js</h2>
+                        <p></p>
+                    </div>
+                </div>
 
+                <div class="cards_docs" id="serverSR">
 
+                    <img src="../assets/icons/bolloon.svg" alt="none" class="image_cards_docs"/>
                     <div class="cards_content_docs">
                         <h2 >Server side render</h2>
                         <p>texto de la siente bentana</p>
                     </div>
                 </div>
-                
             </div>
         </div>
-    </div>`
+    </div>
+    `
     
     
     DOMrender.appendChild(containerRender)
@@ -81,10 +91,6 @@ function backendNote () {
 
     let btn_hero_docs = DOMrender.querySelector('#btn_hero')
     let containerDOM = DOMrender.querySelector('.header_docs')
-
-
-   
-
 
     btn_hero_docs.addEventListener('click', (e) => {
         e.stopPropagation()
@@ -94,7 +100,7 @@ function backendNote () {
 
 
     const showMenuDocs = ({target:{parentElement}}) => {
-        setShowMenuDocs(parentElement.parentElement.parentElement.parentElement)    
+        setShowMenuDocs(parentElement.parentElement.parentElement)    
     }
 
 

@@ -1,11 +1,15 @@
 import backendNote from "./pages/backend.js"
+import elementForOtherDoc from "./components/getMenu.js"
+
+
 
 const buttonMenu = document.getElementById('btn_menu_show')
 const prevent = document.getElementById('btnPrevent')
 const next = document.getElementById('btnNext')
 const viewBackend = document.getElementById('viewBackend')
 const menuShow = document.getElementById('menuShow')
-const header = document.querySelector('.header')
+
+
 
 window.addEventListener('DOMContentLoaded', () => {
     window.scroll({top:0})
@@ -14,37 +18,15 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 viewBackend.addEventListener('click', (e) => {
-    e.preventDefault()
-    backendNote()
+    setTimeout(() => {
+        backendNote()
+        e.preventDefault()
+    }, 600)
 })
 
-window.addEventListener('scroll', () => {
-    let referenceElementWindow = document.querySelector('body').getBoundingClientRect().bottom
-    let positionNavbar = window.scrollY
-    if(referenceElementWindow / 4 <= positionNavbar) {
-        document.querySelector('.header-nav').style.backgroundColor = 'var(--azul)'
-        document.querySelector('.header-nav').style.boxShadow = '0 0 20px rgba(0 0 0 / .5)'
-        return 
-    }
-    
-    document.querySelector('.header-nav').style.backgroundColor = 'initial'
-    document.querySelector('.header-nav').style.boxShadow = 'initial'
-})
+window.addEventListener('scroll', () => elementForOtherDoc())
 
-const showConsole = () => {
-
-    const options = {
-        top: -window.innerHeight,
-        left: 0,
-        behavior: "smooth"
-    }
-
-    window.scroll(options)
-}
-
-buttonMenu.addEventListener('click', () => {
-    ShowMenu()
-})
+buttonMenu.addEventListener('click', () => ShowMenu())
 
 
 function ShowMenu (){
@@ -57,8 +39,8 @@ function ShowMenu (){
         return
     }
 
-    menuShow.style.width = `0px`
     buttonMenu.firstElementChild.setAttribute('src', './assets/icons/menuBTN.svg')
+    menuShow.style.width = `0px`
     
 }
 
