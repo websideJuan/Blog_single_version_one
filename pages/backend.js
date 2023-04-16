@@ -14,9 +14,6 @@ function backendNote () {
     <div class="docs activate">
 
         <div class="hero_docs">
-                
-            <h2 class="title_header_docs">Backend</h2>
-
             <button class="btn" id="btn_hero" >
                 <img src="../assets/icons/navegation.svg" alt="none"/>
             </button>
@@ -48,18 +45,35 @@ function backendNote () {
         </div>
 
         <div class="header_docs">
-
-
-
             <div class="container_docs" id="bienvenidoSR">
                 <div class="cards_docs">
 
                     <img src="../assets/icons/bolloon.svg" alt="none" class="image_cards_docs"/>
                     <div class="cards_content_docs">
-                        <h2>Servidor JS</h2>
+                        <h2>Servidor</h2>
+
                         <p>Entrar al backend es el siguiente nivel para un desarrollador frontend, llegando a ser fullstack</p>
 
-                        <p>Esto lleva a comprender el lenguaje en si mismo, conociendo temas como el callback en profundidad</p>
+                        <p>
+                            Esto lleva a comprender el lenguaje en si mismo,
+                            conociendo temas como el callback en profundidad, 
+                            desde mi punto de vista necesitas conocer y dominar en un 
+                            nivel basico.
+                        </p>
+
+                        <ul>
+                            <li>
+                                HTML 5
+                            </li>
+
+                            <li>
+                                CSS
+                            </li>
+
+                            <li>
+                                Javascript
+                            </li>
+                        </ul>
                     </div>
                 </div>
 

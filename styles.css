@@ -478,9 +478,18 @@ footer{
 }
 
 .cards_content_docs p{
-    text-align: initial;
-    padding: 0 1rem;
+    text-align: justify;
+    padding: 0 .6rem;
     max-width: 400px;
+}
+
+.cards_content_docs ul{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
 }
 
 @media (min-width:375px) {
