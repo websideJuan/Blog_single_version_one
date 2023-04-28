@@ -1,5 +1,10 @@
 import backendNote from "./pages/backend.js"
 import elementForOtherDoc from "./components/getMenu.js"
+import Todo from "./components/dataBase.js"
+
+
+const todos = new Todo()
+
 
 
 
@@ -11,11 +16,16 @@ const menuShow = document.getElementById('menuShow')
 
 
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
     window.scroll({top:0})
     currentCarrusel(positionInitial);
-    
 })
+
+
+
+
+
+
 
 viewBackend.addEventListener('click', (e) => {
     setTimeout(() => {
@@ -26,10 +36,10 @@ viewBackend.addEventListener('click', (e) => {
 
 window.addEventListener('scroll', () => elementForOtherDoc())
 
-buttonMenu.addEventListener('click', () => ShowMenu())
+buttonMenu.addEventListener('click', () => showMenu())
 
 
-function ShowMenu (){
+function showMenu (){
     let initializing = menuShow.clientWidth
     let widthReference = window.innerWidth
     
